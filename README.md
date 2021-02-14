@@ -1,8 +1,8 @@
 <p align="center">
   <img width="150" src="https://i.ibb.co/N3DnS25/perfil-300.jpg">
 </p>
-<h1 align=center>API</h1>
-<p align="center">Just a Node.js REST API.</p>
+<h1 align=center>Fluke</h1>
+<p align="center">A simple test.</p>
 
 <div align="center">
 
@@ -16,12 +16,20 @@
 
 <img src="https://media-exp1.licdn.com/dms/image/C4D1BAQHoXizF4_hqZA/company-background_10000/0/1594770682384?e=2159024400&v=beta&t=3yhYJPHxmkyCFz8HSEOnKAp-WLoCxmBbRGycF56c2XU">
 
+***
+
+The algorithm part of the challenge is stored inside the "algorithm" folder. It was written in C and it's a very simple program.
+
+***
+
 ## :books: Let me tell you a little bit about this project:
 This API is one of the parts of the technical challenge step of the Fluke hiring process.
 The challenge was to build an application, using Node.js, with the following specifications:
 - The API must be integrated with a NoSQL database;
 - You have full control of the application's scope, make all technical decisions regarding architecture and design patterns as you see fit;
 - Don't forget the docs!
+
+***
 
 ## :boom: The decisions I made and how I built the API:
 Ok, let me show you how I built this project and all the decisions I had to make. Let's take this step-by-step so we don't get lost on the way:
