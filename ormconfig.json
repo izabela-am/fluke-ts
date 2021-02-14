@@ -7,6 +7,7 @@
   "logging": true,
   "entities": [
     "./src/modules/users/infra/typeorm/entities/*.ts",
-    "./src/modules/tickets/infra/typeorm/entities/*.ts"
+    "./src/modules/tickets/infra/typeorm/entities/*.ts",
+    "./src/modules/products/infra/typeorm/entities/*.ts"
   ]
 }
