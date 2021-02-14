@@ -36,7 +36,7 @@ Ok, let me show you how I built this project and all the decisions I had to make
   - But why did I choose DDD? I recommend the reading of [this article](https://www.informit.com/articles/article.aspx?p=1944876&seqNum=2#:~:text=DDD%20provides%20sound%20software%20development,and%20who%20must%20be%20involved.), that helped me understand the benefits of Domain Driven Design a lot better.
   - I also tried my best to apply the SOLID principles while building this;
   
- This was not my first time applying these concepts inside a proejct, but it's always interesting to do so and I always learn a lot.
+ This was not my first time applying these concepts inside a projject, but it's always interesting to do so and I always learn a lot.
 ***
   
 - __The techinical decisions__: Let's talk about all the frameworks, libraries and things of the sort that I chose to go with:
@@ -56,8 +56,10 @@ Ok, let me show you how I built this project and all the decisions I had to make
     - JWT;
     - reflect-metadata;
     - express-async-errors;
-    -ts-node-dev;
+    - ts-node-dev;
     - Bcryptjs;
+
+- For data persistency, I used MongoDB Atlas' free tier cluster, hosted on GCP.
 
 <p align="center">
   <img width="50" src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png">
@@ -110,8 +112,20 @@ __Take the token from this request's response and use it as a header on requests
 ***
 
 ### POST /productsOrder:
-For this request, make sure you don't forget to pass the desired product's id as a query param.
+For this request, make sure you don't forget to pass the desired product's id as a query param.<br>
 This request requires authentication, so don't forget to take the token you've gotten from the /authentication request and use it as a header here.
+
+To make this request, you'll need to know the ID of the product you want to purchase:
+- 6029249f59437c0cd43c9e5f
+- 6029250e59437c0cd43c9e60
+- 6029252d59437c0cd43c9e61
+- 6029253f59437c0cd43c9e62
+- 6029255059437c0cd43c9e63
+- 6029255b59437c0cd43c9e64
+<p align="center">  
+  <img width="250px" src="https://64.media.tumblr.com/6ced9bffffe70fe28e1f632baa830671/5556f4b56975f229-be/s500x750/3d83d9162dbebfc7db615455863b43c8e74837de.png">
+</p>
+
 ```
 curl --request POST
   --url 'http://localhost:3333/productsOrder?productId={productId}'
