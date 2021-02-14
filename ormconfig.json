@@ -5,5 +5,8 @@
   "synchronize": true,
   "useUnifiedTopology": true,
   "logging": true,
-  "entities": ["./src/modules/**/infra/typeorm/entities/*.ts"]
+  "entities": [
+    "./src/modules/users/infra/typeorm/entities/*.ts",
+    "./src/modules/tickets/infra/typeorm/entities/*.ts"
+  ]
 }
