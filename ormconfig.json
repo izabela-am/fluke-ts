@@ -1,0 +1,8 @@
+{
+  "type": "mongodb",
+  "url": "mongodb://Izabela:uiaypulSWmbX1Iar@fluke-shard-00-00.ju6xj.mongodb.net:27017,fluke-shard-00-01.ju6xj.mongodb.net:27017,fluke-shard-00-02.ju6xj.mongodb.net:27017/Fluke?ssl=true&replicaSet=atlas-n2c4w5-shard-0&authSource=admin&retryWrites=true&w=majority",
+  "useNewUrlParser": true,
+  "synchronize": true,
+  "logging": true,
+  "entities": ["src/entity/*.ts"]
+}
