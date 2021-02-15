@@ -1,4 +1,7 @@
-## O segundo teste é:
+Para rodar o algoritmo no browser e não precisar instalar o compilador gcc na sua máquina local, use o site [repl.it](https://repl.it/languages/c)
+
+
+#### Desafio:
 Utilizando uma linguagem de programação de sua escolha, faça um algoritmo que dado um número inteiro de 1 a 100, imprima na tela o desenho de um círculo preenchido por caracteres se sua escolha onde o número inteiro será o raio de caracteres do círculo.
 Por exemplo, dado o número inteiro 5, uma possibilidade de desenho é a seguinte:
 
