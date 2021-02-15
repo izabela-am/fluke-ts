@@ -1,8 +1,8 @@
 <p align="center">
   <img width="150" src="https://i.ibb.co/N3DnS25/perfil-300.jpg">
 </p>
-<h1 align=center>API</h1>
-<p align="center">Just a Node.js REST API.</p>
+<h1 align=center>Fluke</h1>
+<p align="center">A simple test.</p>
 
 <div align="center">
 
@@ -16,12 +16,20 @@
 
 <img src="https://media-exp1.licdn.com/dms/image/C4D1BAQHoXizF4_hqZA/company-background_10000/0/1594770682384?e=2159024400&v=beta&t=3yhYJPHxmkyCFz8HSEOnKAp-WLoCxmBbRGycF56c2XU">
 
+***
+
+The algorithm part of the challenge is stored inside the "algorithm" folder. It was written in C and it's a very simple program.
+
+***
+
 ## :books: Let me tell you a little bit about this project:
 This API is one of the parts of the technical challenge step of the Fluke hiring process.
 The challenge was to build an application, using Node.js, with the following specifications:
 - The API must be integrated with a NoSQL database;
 - You have full control of the application's scope, make all technical decisions regarding architecture and design patterns as you see fit;
 - Don't forget the docs!
+
+***
 
 ## :boom: The decisions I made and how I built the API:
 Ok, let me show you how I built this project and all the decisions I had to make. Let's take this step-by-step so we don't get lost on the way:
@@ -60,6 +68,11 @@ Ok, let me show you how I built this project and all the decisions I had to make
     - Bcryptjs;
 
 - For data persistency, I used MongoDB Atlas' free tier cluster, hosted on GCP.
+
+#### Quick observation: If you get the following error while running the application, do not panic. It's an error with MongoDB Atlas' Node.js driver and not the app itself. For me, changing the network I'm connected to fixes the problem. Sadly, all we can do is wait for the Atlas team to fix this issue
+  ```
+  UnhandledPromiseRejectionWarning: Error: querySrv EREFUSED _mongodb._tcp.fluke.ju6xj.mongodb.net
+  ```
 
 <p align="center">
   <img width="50" src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png">
@@ -116,14 +129,11 @@ For this request, make sure you don't forget to pass the desired product's id as
 This request requires authentication, so don't forget to take the token you've gotten from the /authentication request and use it as a header here.
 
 To make this request, you'll need to know the ID of the product you want to purchase:
-- 6029249f59437c0cd43c9e5f
-- 6029250e59437c0cd43c9e60
-- 6029252d59437c0cd43c9e61
-- 6029253f59437c0cd43c9e62
-- 6029255059437c0cd43c9e63
-- 6029255b59437c0cd43c9e64
+- 602a77babfc6ba117431834a
+- 602a77eebfc6ba117431834b
+- 602a7805bfc6ba117431834c
 <p align="center">  
-  <img width="250px" src="https://64.media.tumblr.com/6ced9bffffe70fe28e1f632baa830671/5556f4b56975f229-be/s500x750/3d83d9162dbebfc7db615455863b43c8e74837de.png">
+  <img width="250px" src="https://64.media.tumblr.com/d7502960841ff94837b52851a7e41482/5556f4b56975f229-33/s540x810/83faf11c89dcb2b341fa07febba4d361d7e2ad48.png">
 </p>
 
 ```
