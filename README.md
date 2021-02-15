@@ -69,7 +69,7 @@ Ok, let me show you how I built this project and all the decisions I had to make
 
 - For data persistency, I used MongoDB Atlas' free tier cluster, hosted on GCP.
 
-#### Quick observation: If you get the following error while running the application, do not panic. It's an error with MongoDB Atlas' Node.js driver and not the app itself. Wait a few hours and try running the API again. Sadly, all we can do is wait for the Atlas team to fix this issue
+#### Quick observation: If you get the following error while running the application, do not panic. It's an error with MongoDB Atlas' Node.js driver and not the app itself. For me, changing the network I'm connected to fixes the problem. Sadly, all we can do is wait for the Atlas team to fix this issue
   ```
   UnhandledPromiseRejectionWarning: Error: querySrv EREFUSED _mongodb._tcp.fluke.ju6xj.mongodb.net
   ```
@@ -129,14 +129,11 @@ For this request, make sure you don't forget to pass the desired product's id as
 This request requires authentication, so don't forget to take the token you've gotten from the /authentication request and use it as a header here.
 
 To make this request, you'll need to know the ID of the product you want to purchase:
-- 6029249f59437c0cd43c9e5f
-- 6029250e59437c0cd43c9e60
-- 6029252d59437c0cd43c9e61
-- 6029253f59437c0cd43c9e62
-- 6029255059437c0cd43c9e63
-- 6029255b59437c0cd43c9e64
+- 602a77babfc6ba117431834a
+- 602a77eebfc6ba117431834b
+- 602a7805bfc6ba117431834c
 <p align="center">  
-  <img width="250px" src="https://64.media.tumblr.com/6ced9bffffe70fe28e1f632baa830671/5556f4b56975f229-be/s500x750/3d83d9162dbebfc7db615455863b43c8e74837de.png">
+  <img width="250px" src="https://64.media.tumblr.com/d7502960841ff94837b52851a7e41482/5556f4b56975f229-33/s540x810/83faf11c89dcb2b341fa07febba4d361d7e2ad48.png">
 </p>
 
 ```
