@@ -1,6 +1,7 @@
 import { getRepository, Repository } from 'typeorm';
 
 import Product from '@modules/products/infra/typeorm/entities/Product';
+import User from '@modules/users/infra/typeorm/entities/User';
 import IProductsRepository from '@modules/products/repositories/IProductsRepository';
 
 class ProductsRepository implements IProductsRepository {
@@ -16,12 +17,10 @@ class ProductsRepository implements IProductsRepository {
     return product;
   }
 
-  public async all(id: string) {
-    const [product, productCount] = await this.ormRepository.findAndCount({
-      where: id
-    });
+  public async all(productId: string) {
+    const returnProduct = await this.ormRepository.findOne(productId);
 
-    return { product, productCount };
+    return returnProduct;
   }
 }
 

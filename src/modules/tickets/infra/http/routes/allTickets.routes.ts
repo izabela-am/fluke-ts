@@ -1,7 +1,6 @@
 import { Router } from 'express';
 
 import TicketsRepository from '../../typeorm/repositories/TicketsRepository';
-import CreateTicketService from '../../../services/CreateTicketService';
 import auth from '@modules/users/infra/http/middlewares/EnsureAuthentication';
 
 const allTickets = Router();

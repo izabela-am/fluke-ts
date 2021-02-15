@@ -1,14 +1,29 @@
-import AppError from '@shared/errors/AppError';
+import { getRepository, Repository } from 'typeorm';
+
+import User from '@modules/users/infra/typeorm/entities/User';
 import Product from '@modules/products/infra/typeorm/entities/Product';
 import IProductsRepository from '@modules/products/repositories/IProductsRepository';
 
 class PurchaseProductService {
-  constructor(private productsRepository: IProductsRepository) {}
+  private usersRepository: Repository<User>;
 
-  public async execute(productId: string): Promise<Product | undefined> {
-    const product = this.productsRepository.findById(productId);
+  constructor(private productsRepository: IProductsRepository) {
+    this.usersRepository = getRepository(User);
+  }
 
-    return product;
+  public async execute(productId: string, userId: string): Promise<Product | undefined> {
+    await this.productsRepository.findById(productId);
+    await this.usersRepository.update(userId, {
+      products_id: productId
+    });
+
+    await this.usersRepository.findOne({
+      where: productId
+    });
+
+    const returnProduct = await this.productsRepository.findById(productId);
+
+    return returnProduct;
   }
 }
 

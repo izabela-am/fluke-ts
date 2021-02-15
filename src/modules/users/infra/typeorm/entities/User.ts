@@ -20,11 +20,8 @@ class User {
   @Column()
   password: string;
 
-  @Column()
-  products: Array<Object>;
-  
-  @Column()
-  tickets: Array<Object>;
+  @Column({ default: ' ' })
+  products_id: string;
 
   @CreateDateColumn()
   created_at: Date;

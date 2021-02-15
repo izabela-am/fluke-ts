@@ -2,21 +2,18 @@ import { Router } from 'express';
 
 import PurchaseProductService from '@modules/products/services/BuyProductsService';
 import ProductsRepository from '@modules/products/infra/typeorm/repositories/ProductsRepository';
+import auth from '@modules/users/infra/http/middlewares/EnsureAuthentication';
 
 const buy = Router();
 
-buy.post('/', async (request, response) => {
+buy.post('/', auth, async (request, response) => {
   const { productId } = request.query;
+  const userId = request.user.id;
 
   const productsRepository = new ProductsRepository();
   const purchaseProduct = new PurchaseProductService(productsRepository);
 
-  
-  if(!productId) {
-    throw new Error('Please inform the ID of the desired product');
-  }
-
-  const boughtProduct = await purchaseProduct.execute(productId as string);
+  const boughtProduct = await purchaseProduct.execute(productId as string, userId);
 
   return response.json(boughtProduct);
 });

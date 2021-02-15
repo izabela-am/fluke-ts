@@ -1,6 +1,6 @@
 {
   "type": "mongodb",
-  "url": "mongodb+srv://Izabela:uiaypulSWmbX1Iar@fluke.ju6xj.mongodb.net/Fluke?retryWrites=true&w=majority",
+  "url": "mongodb+srv://Izabela:1dCZCz4J8OIppvFk@fluke.ju6xj.mongodb.net/Fluke?retryWrites=true&w=majority",
   "useNewUrlParser": true,
   "synchronize": true,
   "useUnifiedTopology": true,
