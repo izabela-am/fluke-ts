@@ -7,9 +7,7 @@
 <div align="center">
 
 <a href="https://www.linkedin.com/in/izabela-matos/" rel="linkedin">![Author](https://img.shields.io/badge/made%20by-izabela-green)</a>
-![Languages](https://img.shields.io/github/languages/count/izabela-am/fluke?color=green)
-![Repository Size](https://img.shields.io/github/repo-size/izabela-am/fluke?color=green)
-![Last Commit](https://img.shields.io/github/last-commit/izabela-am/fluke?color=green)
+![Last Commit](https://img.shields.io/github/last-commit/izabela-am/fluke-ts?color=green)
 
 </div>
 
