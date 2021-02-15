@@ -69,6 +69,11 @@ Ok, let me show you how I built this project and all the decisions I had to make
 
 - For data persistency, I used MongoDB Atlas' free tier cluster, hosted on GCP.
 
+#### Quick observation: If you get the following error while running the application, do not panic. It's an error with MongoDB Atlas' Node.js driver and not the app itself. Sadly, all we can do is wait for the Atlas team to fix this issue
+  ```
+  UnhandledPromiseRejectionWarning: Error: querySrv EREFUSED _mongodb._tcp.fluke.ju6xj.mongodb.net
+  ```
+
 <p align="center">
   <img width="50" src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png">
 </p>
